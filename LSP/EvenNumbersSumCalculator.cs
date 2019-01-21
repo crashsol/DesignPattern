@@ -11,7 +11,7 @@ namespace LSP
         {
 
         }
-        public new int Calculate() => _numbers.Where(b => b % 2 == 0).Sum();
+        public override int Calculate() => _numbers.Where(b => b % 2 == 0).Sum();
 
     }
 }

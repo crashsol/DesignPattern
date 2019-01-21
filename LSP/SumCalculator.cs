@@ -13,6 +13,6 @@ namespace LSP
             _numbers = numbers;
         }
 
-        public int Calculate() => _numbers.Sum();
+        public virtual int Calculate() => _numbers.Sum();
     }
 }

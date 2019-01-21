@@ -16,8 +16,11 @@ namespace LSP
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
-            EvenNumbersSumCalculator evenSum = new EvenNumbersSumCalculator(numbers);
+           
+            SumCalculator evenSum = new EvenNumbersSumCalculator(numbers);
             Console.WriteLine($"The sum of all the even numbers: {evenSum.Calculate()}");
+
+       
 
             Console.ReadLine();
         }
