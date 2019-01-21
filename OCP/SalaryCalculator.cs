@@ -6,9 +6,9 @@ namespace OCP
 {
    public class SalaryCalculator
     {
-        private readonly IEnumerable<DeveloperReport> _developerReports;
+        private readonly IEnumerable<BaseSalaryCalculator> _developerReports;
 
-        public SalaryCalculator(List<DeveloperReport> developerReports)
+        public SalaryCalculator(List<BaseSalaryCalculator> developerReports)
         {
             _developerReports = developerReports;
         }
@@ -18,7 +18,8 @@ namespace OCP
             double totalSalaries = 0D;
             foreach (var item in _developerReports)
             {
-                totalSalaries += item.HourlyRate * item.WorkingHours;
+                totalSalaries += item.CalculateSalary();
+               
             }
             return totalSalaries;
         }
